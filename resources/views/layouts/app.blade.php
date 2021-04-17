@@ -87,8 +87,10 @@
 
     $(function () {
             var getData = function (request, response) {
+                var key = '{{ env('SMARTYSTREET_CLIENT_KEY') }}';
+                //console.log(key);
                 $.getJSON(
-                    "https://us-autocomplete-pro.api.smartystreets.com/lookup?key=21102174564513388&search=" + request.term,
+                    "https://us-autocomplete-pro.api.smartystreets.com/lookup?key="+key+"&search=" + request.term,
                     function (data) {
                         //console.log(data.suggestions);
                         var vals=[];

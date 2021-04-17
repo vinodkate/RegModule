@@ -33,7 +33,7 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 	DB_USERNAME=<db_username><br>
 	DB_PASSWORD=<db_password><br> 
 
-6) Change following email configuration variables in .env file
+6) Change following email configuration variables in .env file 
 
 	MAIL_DRIVER=smtp<br>
 	MAIL_HOST=smtp.mailtrap.io<br>
@@ -46,6 +46,7 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 	
 	SMARTYSTREET_AUTH_ID=<auth_id><br>
 	SMARTYSTREET_AUTH_TOKEN=<auth_token><br>
+	SMARTYSTREET_CLIENT_KEY=<key><br>
 
 8) Run composer install command -> composer install
 9) Run php artisan migration command -> php artisan migrate
@@ -54,6 +55,10 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 ## Project Images
 - Street Address auto-suggest
 <p align="center"><img src="https://github.com/vinodkate/RegModule/blob/master/public/images/RegForm1.png?raw=true"></p>
+
 - Registration Form
 <p align="center"><img src="https://github.com/vinodkate/RegModule/blob/master/public/images/RegForm2.png?raw=true"></p>
+
+- Welcome Email
+<p align="center"><img src="https://github.com/vinodkate/RegModule/blob/master/public/images/welcome.png?raw=true"></p>
 

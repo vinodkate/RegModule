@@ -42,7 +42,7 @@ Created User Registration Module with following fields:
 
 4) Change following email configuration variables in .env file
 
-	MAIL_DRIVER=smtp<br>
+	<br>MAIL_DRIVER=smtp<br>
 	MAIL_HOST=smtp.mailtrap.io<br>
 	MAIL_PORT=2525<br>
 	MAIL_USERNAME=<mailtrap_username><br>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use GuzzleHttp\Client;
 
 class RegisterController extends Controller
 {
@@ -55,9 +56,11 @@ class RegisterController extends Controller
             'address' => ['required', 'string', 'max:255'],
             'city' => ['required', 'string', 'max:255'],
             'state' => ['required', 'string', 'max:255'],
-            'zip' => ['required', 'numeric','max:15'],
+            'zip' => ['required', 'numeric'],
             'password' => ['required', 'string', 'min:6', 'max:12','confirmed'],
         ]);
+
+        
     }
 
     /**
@@ -68,7 +71,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
@@ -78,5 +81,26 @@ class RegisterController extends Controller
             'zip' => $data['zip'],
             'password' => Hash::make($data['password']),
         ]);
+
+        return $this->smartyStreetAPICall($user);
+   
+    }
+
+    /**
+    *
+    * Smarty Street
+    */
+    protected function smartyStreetAPICall($user)
+    {
+
+        $client = new Client(['base_uri' => 'https://us-street.api.smartystreets.com/']);
+        $response = $client->request('GET', 'street-address?auth-id=cb537b08-9c27-b355-6f35-492a41e4c115&auth-token=f3LOL811wFp9SkF8bGJ3&street='.$user->address.'&street2=&city='.$user->city.'&state='.$user->state.'&zipcode=&candidates=10&match=invalid');
+        $data = json_decode($response->getBody(), true);
+      
+        $user->county = isset($data[0]['metadata']['county_name']) ? $data[0]['metadata']['county_name'] : NULL; 
+        $user->save();
+
+        return $user;
+
     }
 }

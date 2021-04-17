@@ -45,7 +45,7 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 
 6) Change following email configuration variables in .env file
 
-	<br>MAIL_DRIVER=smtp<br>
+	MAIL_DRIVER=smtp<br>
 	MAIL_HOST=smtp.mailtrap.io<br>
 	MAIL_PORT=2525<br>
 	MAIL_USERNAME=<mailtrap_username><br>
@@ -54,8 +54,8 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 
 7) Change following smartystreet auth keys
 	
-	<br>SMARTYSTREET_AUTH_ID=<br>
-	SMARTYSTREET_AUTH_TOKEN=<br>
+	SMARTYSTREET_AUTH_ID=<auth-id><br>
+	SMARTYSTREET_AUTH_TOKEN=<auth-token><br>
 
 8) Run composer install command -> composer install
 9) Run php artisan migration command -> php artisan migrate

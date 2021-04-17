@@ -33,7 +33,8 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 1) Clone this project module by -> git clone https://github.com/vinodkate/RegModule.git
 2) Navigate to RegModule directory from commnad prompt / git bash
 3) Create MySQL Database by name reg_module
-3) Change following database env variables in .env file
+4) Copy .env.example to .env file
+5) Change following database env variables in .env file
 
 	DB_CONNECTION=mysql<br>
 	DB_HOST=127.0.0.1<br>
@@ -42,7 +43,7 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 	DB_USERNAME=<db_username><br>
 	DB_PASSWORD=<db_password><br> 
 
-4) Change following email configuration variables in .env file
+6) Change following email configuration variables in .env file
 
 	<br>MAIL_DRIVER=smtp<br>
 	MAIL_HOST=smtp.mailtrap.io<br>
@@ -50,10 +51,16 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 	MAIL_USERNAME=<mailtrap_username><br>
 	MAIL_PASSWORD=<mailtrap_password><br>
 	MAIL_ENCRYPTION=null<br>
-4) Run composer install command -> composer install
-6) Run php artisan migration command -> php artisan migrate
-7) Run project by -> php artisan serv
-8) Thank you!
+
+7) Change following smartystreet auth keys
+	
+	<br>SMARTYSTREET_AUTH_ID=<br>
+	SMARTYSTREET_AUTH_TOKEN=<br>
+
+8) Run composer install command -> composer install
+9) Run php artisan migration command -> php artisan migrate
+10) Run project by -> php artisan serv
+
 
 ## Project Images
 - Street Address auto-suggest

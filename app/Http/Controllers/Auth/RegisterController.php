@@ -87,14 +87,13 @@ class RegisterController extends Controller
     }
 
     /**
-    *
-    * Smarty Street
+    * Smarty Street API Call
     */
     protected function smartyStreetAPICall($user)
     {
 
         $client = new Client(['base_uri' => 'https://us-street.api.smartystreets.com/']);
-        $response = $client->request('GET', 'street-address?auth-id=cb537b08-9c27-b355-6f35-492a41e4c115&auth-token=f3LOL811wFp9SkF8bGJ3&street='.$user->address.'&street2=&city='.$user->city.'&state='.$user->state.'&zipcode=&candidates=10&match=invalid');
+        $response = $client->request('GET', 'street-address?auth-id='.env('SMARTYSTREET_AUTH_ID').'&auth-token='.env('SMARTYSTREET_AUTH_TOKEN').'&street='.$user->address.'&street2=&city='.$user->city.'&state='.$user->state.'&zipcode=&candidates=10&match=invalid');
         $data = json_decode($response->getBody(), true);
       
         $user->county = isset($data[0]['metadata']['county_name']) ? $data[0]['metadata']['county_name'] : NULL; 

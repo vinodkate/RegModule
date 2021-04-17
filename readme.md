@@ -20,7 +20,6 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 - Zip
 - password
 
-
 ## Following things are considered in this module
 
 1) While typing, it should auto-suggest the address using smarty street API
@@ -60,7 +59,6 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 8) Run composer install command -> composer install
 9) Run php artisan migration command -> php artisan migrate
 10) Run project by -> php artisan serv
-
 
 ## Project Images
 - Street Address auto-suggest

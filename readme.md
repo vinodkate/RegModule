@@ -38,7 +38,7 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 	DB_CONNECTION=mysql<br>
 	DB_HOST=127.0.0.1<br>
 	DB_PORT=3306<br>
-	DB_DATABASE=reg_module
+	DB_DATABASE=reg_module<br>
 	DB_USERNAME=<db_username><br>
 	DB_PASSWORD=<db_password><br> 
 
@@ -53,8 +53,8 @@ Created User Registration Module with Laravel Version 5.7 using following fields
 
 7) Change following smartystreet auth keys
 	
-	SMARTYSTREET_AUTH_ID=<auth-id><br>
-	SMARTYSTREET_AUTH_TOKEN=<auth-token><br>
+	SMARTYSTREET_AUTH_ID=<auth_id><br>
+	SMARTYSTREET_AUTH_TOKEN=<auth_token><br>
 
 8) Run composer install command -> composer install
 9) Run php artisan migration command -> php artisan migrate

@@ -19,6 +19,38 @@ Created User Registration Module with following fields:
 - State
 - Zip
 
+## Following things are considered in this module
+
+1) While typing, it should auto-suggest the address using smarty street  API (US Autocomplete Pro API used)
+2) Send a welcome email to user email id (use Laravel Events)
+3) Using smarty street API Find the county name of that address (US ZIP Code API used)
+4) Save the county name into the user table
+5) Laravel version 5.7 used
+
+## How to Setup
+1) Clone this project module by -> git clone https://github.com/vinodkate/RegModule.git
+2) Navigate to RegModule directory from commnad prompt / git bash
+3) Create MySQL Database by name reg_module
+3) Change following database env variables in .env file
+
+	DB_CONNECTION=mysql
+	DB_HOST=127.0.0.1
+	DB_PORT=3306
+	DB_DATABASE=<db_name>
+	DB_USERNAME=<db_username>
+	DB_PASSWORD=<db_password> 
+
+4) Change following email configuration variables in .env file
+	MAIL_DRIVER=smtp
+	MAIL_HOST=smtp.mailtrap.io
+	MAIL_PORT=2525
+	MAIL_USERNAME=<mailtrap_username>
+	MAIL_PASSWORD=<mailtrap_password>
+	MAIL_ENCRYPTION=null
+4) Run composer install command -> composer install
+6) Run php artisan migration command -> php artisan migrate
+7) Run project by - php artisan serv
+8) Thank you!
 
 ## Project Images
 - Street Address auto-suggest

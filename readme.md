@@ -33,20 +33,20 @@ Created User Registration Module with following fields:
 3) Create MySQL Database by name reg_module
 3) Change following database env variables in .env file
 
-	DB_CONNECTION=mysql
-	DB_HOST=127.0.0.1
-	DB_PORT=3306
-	DB_DATABASE=<db_name>
-	DB_USERNAME=<db_username>
-	DB_PASSWORD=<db_password> 
+	DB_CONNECTION=mysql<br>
+	DB_HOST=127.0.0.1<br>
+	DB_PORT=3306<br>
+	DB_DATABASE=<db_name><br>
+	DB_USERNAME=<db_username><br>
+	DB_PASSWORD=<db_password><br> 
 
 4) Change following email configuration variables in .env file
-	MAIL_DRIVER=smtp
-	MAIL_HOST=smtp.mailtrap.io
-	MAIL_PORT=2525
-	MAIL_USERNAME=<mailtrap_username>
-	MAIL_PASSWORD=<mailtrap_password>
-	MAIL_ENCRYPTION=null
+	MAIL_DRIVER=smtp<br>
+	MAIL_HOST=smtp.mailtrap.io<br>
+	MAIL_PORT=2525<br>
+	MAIL_USERNAME=<mailtrap_username><br>
+	MAIL_PASSWORD=<mailtrap_password><br>
+	MAIL_ENCRYPTION=null<br>
 4) Run composer install command -> composer install
 6) Run php artisan migration command -> php artisan migrate
 7) Run project by - php artisan serv
